@@ -6,7 +6,8 @@ from Controllers.TentangManager import TentangManager
 
 tentang_view = Blueprint('tentang_routes', __name__, template_folder='/templates')
 
-@tentang_view.route()
+tentang_manager = TentangManager(DAO)
 
-def tentang()
+@tentang_view.route('/', methods=['GET'])
+def tentang():
     return render_template('tentang.html')
