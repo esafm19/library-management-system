@@ -18,7 +18,7 @@ def home():
 	return render_template('home.html', g=g)
 
 
-@user_view.route('/signin', methods=['GET', 'POST'])
+@user_view.route('/signinxx', methods=['GET', 'POST'])
 @user_manager.user.redirect_if_login
 def signin():
 	if request.method == 'POST':

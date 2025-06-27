@@ -8,6 +8,6 @@ tentang_view = Blueprint('tentang_routes', __name__, template_folder='/templates
 
 #tentang_manager = TentangManager(DAO)
 
-@tentang_view.route('/', methods=['GET'])
+@tentang_view.route('/tentang', methods=['GET'])
 def home():
     return render_template('tentang.html')
