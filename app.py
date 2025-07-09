@@ -10,10 +10,10 @@ from Models.DAO import DAO
 DAO = DAO(app)
 
 # Registering blueprints
-from routes.user import user_view
-from routes.book import book_view
-from routes.admin import admin_view
-from routes.tentang import tentang_view
+#from routes.user import user_view
+#from routes.book import book_view
+#from routes.admin import admin_view
+#from routes.tentang import tentang_view
 
 # Registering custom functions to be used within templates
 app.jinja_env.globals.update(
@@ -21,7 +21,7 @@ app.jinja_env.globals.update(
     str=str,
 )
 
-app.register_blueprint(user_view)
-app.register_blueprint(book_view)
-app.register_blueprint(admin_view)
-app.register_blueprint(tentang_view)
+#app.register_blueprint(user_view)
+#app.register_blueprint(book_view)
+#app.register_blueprint(admin_view)
+#app.register_blueprint(tentang_view)
