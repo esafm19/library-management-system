@@ -25,3 +25,9 @@ app.jinja_env.globals.update(
 #app.register_blueprint(book_view)
 #app.register_blueprint(admin_view)
 #app.register_blueprint(tentang_view)
+
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
