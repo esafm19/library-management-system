@@ -1,5 +1,4 @@
-pip install gunicorn
-flask==2.3.2
-flask-mysql==1.5.2
-timeago==1.0.15
+Flask
 gunicorn
+mysql-connector-python
+timeago==1.0.15
