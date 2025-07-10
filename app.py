@@ -1,4 +1,4 @@
-from flask import Flask, g, escape, session, redirect, render_template, request, jsonify, Response
+"""from flask import Flask, g, escape, session, redirect, render_template, request, jsonify, Response
 from Misc.functions import *
 
 app = Flask(__name__)
@@ -10,10 +10,10 @@ from Models.DAO import DAO
 DAO = DAO(app)
 
 # Registering blueprints
-#from routes.user import user_view
-#from routes.book import book_view
-#from routes.admin import admin_view
-#from routes.tentang import tentang_view
+from routes.user import user_view
+from routes.book import book_view
+from routes.admin import admin_view
+from routes.tentang import tentang_view
 
 # Registering custom functions to be used within templates
 app.jinja_env.globals.update(
@@ -21,13 +21,18 @@ app.jinja_env.globals.update(
     str=str,
 )
 
-#app.register_blueprint(user_view)
-#app.register_blueprint(book_view)
-#app.register_blueprint(admin_view)
-#app.register_blueprint(tentang_view)
+app.register_blueprint(user_view)
+app.register_blueprint(book_view)
+app.register_blueprint(admin_view)
+app.register_blueprint(tentang_view)
+"""
+from flask import Flask
 
-import os
+app = Flask(__name__)
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    app.run(host="0.0.0.0", port=port)
+@app.route('/')
+def home():
+    return "Hello, Railway! 🚀"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
